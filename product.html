@@ -1,0 +1,820 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>KheloIndia - Efficient Optimise Solutions</title>
+    <link rel="shortcut icon" type="image/png" href="KheloIndia_icon.png"/>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+      <link href="css/customizeStyle.css" rel="stylesheet">
+      <link href="css/carousel.css" rel="stylesheet">
+      <link href="css/sliderbar.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/layout.css" type="text/css">
+      <link href="css/style.css" rel="stylesheet">
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script> 
+      <script type="text/javascript">
+          var IsFirstTime = true;
+          $(document).ready(function () {
+              getDetails('plant');
+
+              $('#navigation_ul').hover(function () {
+                  $('#darkness').fadeTo(200, 1);
+              }, function () {
+                  $('#darkness').fadeTo(200, 0, function () {
+                      $(this).hide();
+                  });
+              });
+          });
+          var lastselectedid;
+          function getDetails(id) {
+              if (id == undefined) return;
+              if (lastselectedid != undefined && lastselectedid != id) {
+                  document.getElementById(lastselectedid).style.display = 'none';
+                  $('#link' + lastselectedid).removeClass('active');
+              }
+
+              if (!IsFirstTime) {
+                  $('html, body').animate({
+                      scrollTop: 350
+                  }, 800);
+              }
+              else {
+                  $('html, body').animate({
+                      scrollTop: 0
+                  }, 800);
+              };
+              IsFirstTime = false;
+
+              document.getElementById(id).style.display = 'block';
+              $('#link' + id).addClass('active');
+              lastselectedid = id;
+          }
+      </script> 
+   </head>
+   <body>
+      <div id="darkness" style="height:4000px;"></div>
+      <div style="height:30px;background:#243c98;position:fixed;width:100%;z-index:1020">
+         <div class="pull-left" style="margin-top:3px">
+            <ul class="pull-left topBarLink">
+               <li style="border-right:2px solid rgb(0,0,120)"> <a style="color:#fff"><img src="images/indiana-flag.png" style="height:15px">&nbsp;+91.759.740.2411</a></li>
+               <li style="border-right:2px solid rgb(0,0,120)"> <a style="color:#fff"><img src="images/us_flag_icon.png" style="height:15px">&nbsp;+91.759.740.2411</a></li>
+               <li style="border-right:2px solid rgb(0,0,120)"> <a style="color:#fff">English</a></li>
+               <li style="border-right:2px solid rgb(0,0,120)"> <a style="color:#fff">Contact</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="container">
+         <div class="navbar-inverse navbar-fixed-top" role="navigation" style="width:100%;margin-left:0%;margin-top:30px">
+            <div class="topBar hidden-xs">
+               <div class="container">
+                  <div class="pull-left col-md-3">
+                     <a class="navbar-brand" href="default.html">
+                     <img itemprop="image" class="img-responsive logo" alt="KheloIndia Logo" src="images/kheloindiakhelo.png" style="height:50px;margin-top:2%">
+                     </a>
+                  </div>
+                   <div class="navBox pull-right col-md-7" style="margin-top:3%">
+               <div class="container ">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button>
+                  </div>
+                  <div class="navbar-collapse collapse ">
+                     <ul class="nav navbar-nav" id="navigation_ul">
+                        <li><a href="default.html">HOME</a></li>
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">ABOUT<b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="about.html">Company Overview</a></li>
+                              <li><a href="team.html">Company Team</a></li>
+                              <li><a href="customer_success.html">Customer Success</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="portfolio.html">PORTFOLIO</a> </li>
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="color:#243c98">PRODUCT<b class="caret"></b></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="product.html">KheloIndia Plant</a></li>
+                              <li><a href="product.html#tradeanalyzer">Mobile Development</a></li>
+                              <li><a href="product.html">Web Development</a></li>
+                              <li><a href="product.html">Software Development</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="partner.html">PARTNERS</a> </li>
+                        <li><a href="contact.html">CONTACT</a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+               </div>
+            </div>
+            
+         </div>
+         <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:130px">
+            <ol class="carousel-indicators">
+               <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+               <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+               <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="item slider06">
+                  <img alt="KheloIndia Infotech" class="img-responsive" src="images/Productbanner.png" style="width:100%">
+               </div>
+               <div class="item slider08 active">
+                  <img alt="KheloIndia Infotech" class="img-responsive" src="images/mob8.jpg" style="width:100%">
+               </div>
+               <div class="item slider03">
+                  <img alt="KheloIndia Infotech" class="img-responsive" src="images/wealthmngmt.PNG" style="width:100%">
+               </div>
+                <div class="item slider03">
+                  <img alt="KheloIndia Infotech" class="img-responsive" src="images/tradeanalyzer.PNG" style="width:100%">
+               </div>
+                <div class="item slider03">
+                  <img alt="KheloIndia Infotech" class="img-responsive" src="images/KheloIndiaplant.PNG" style="width:100%">
+               </div>
+            </div>
+             <!-- Left and right controls -->
+  <a class="right carousel-control" style="margin-right:11%" href="#myCarousel" role="button" data-slide="prev">
+    <span style="vertical-align: middle" class="fa fa-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" style="margin-right:5%" href="#myCarousel" role="button" data-slide="next">
+    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+         </div>
+         <div class="col-md-12" style="margin-top:15px;min-height:500px">
+            <div class="dropdown open col-md-3" style="list-style-type:none;">
+               <ul class="dropdown-menu" style="z-index:0;margin-bottom:50px">
+                  <li class="dropdown-header active" id="linkplant" onclick="getDetails('plant')">
+                     KheloIndia Plant™
+                  </li>
+                  <li>
+                     <a id="linkprovisioner" onclick="getDetails('provisioner')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> KheloIndia Client Provisioner™
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linkupgrader" onclick="getDetails('upgrader')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> KheloIndia Client Upgrader™
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linkclientmanager" onclick="getDetails('clientmanager')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> KheloIndia Client Manager™
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linksites" onclick="getDetails('sites')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> KheloIndia Sites™
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linkbilling" onclick="getDetails('billing')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> KheloIndia Billing™
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linknotice" onclick="getDetails('notice')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> KheloIndia Notice™
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linkcallerid" onclick="getDetails('callerid')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> KheloIndia Caller ID™
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linkremotedvr" onclick="getDetails('remotedvr')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> KheloIndia Remote PVR™
+                     </a>
+                  </li>
+                  <li class="dropdown-header">
+                     Mobile Development
+                  </li>
+                  <li>
+                     <a id="linktradeanalyzer" onclick="getDetails('tradeanalyzer')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> Trade Analyzer
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linkwealthmanagement" onclick="getDetails('wealthmanagement')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> Wealth Management
+                     </a>
+                  </li>
+                  <li class="dropdown-header">
+                     Web Development
+                  </li>
+                  <li>
+                     <a id="linkhrms" onclick="getDetails('hrms')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> HRMS
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linkcarshare" onclick="getDetails('carshare')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> Car Share
+                     </a>
+                  </li>
+                  <li>
+                     <a id="linkestatecache" onclick="getDetails('estatecache')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> Estate Cache
+                     </a>
+                  </li>
+                  <li class="dropdown-header">
+                     Software Development
+                  </li>
+                  <li>
+                     <a id="linkerp" onclick="getDetails('erp')">
+                     <span class="fa fa-arrow-right" style="color:blue"></span> ERP
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-md-9">
+               <div class="col-md-12" id="plant" style="display: block;">
+                  <div id="Content">
+                     <h1>KheloIndia Plant™</h1>
+                     <div>
+                        <p>
+                           KheloIndia Plant™ is a suite of Mediaroom Integration and Management Applications that enables service providers to rapidly integrate the necessary systems and applications to offer high-quality IPTV services, protect the Quality of Service (QoS) and manage the overall network Mediaroom implementation from one common interface utilizing state of the art software engines.
+                        </p>
+                     </div>
+                     <div>
+                        <img src="images/jf_plant.png">
+                     </div>
+                     <div>
+                        <p>Plant Applications reside on a minimum of two servers dependent on the level of desired redundancy.</p>
+                     </div>
+                     <div><img src="images/sts.png" alt=""></div>
+                  </div>
+               </div>
+               <div class="col-md-12" style="display:none" id="provisioner">
+                  <div id="Div5">
+                     <h1>KheloIndia Client Provisioner™</h1>
+                     <p>The Client Provisioner™ is responsible for routing un-provisioned Mediaroom STBs to an RDP application which allows the installer to enter account information to associate the device with that account. This cuts CSR provisioning out of the loop, thus saving the cost incurred by that method.  Additionally, this application supports automated device replacement scenarios.  The module consists of an External Login Service (ELS) plug-in and an RDP self-provisioning application.<br>
+                        <br>
+                        The Client Provisioner is a global application built on top of the Plant Framework that interfaces with the Microsoft Mediaroom system via published OSS/BSS web services.   
+                        <br>
+                        <br>
+                        The term global application means that one or more instances, depending on ELS load-balancing and redundancy requirements, of the Device Provisioning Module exist per install, regardless of the number of Mediaroom branches.   
+                     </p>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                  </div>
+               </div>
+               <div class="col-md-12" id="upgrader" style="display:none">
+                  <div id="Div2">
+                     <h1>KheloIndia Client Upgrader™</h1>
+                     <p>
+                        Client Upgrader™ is an application that permits the operator the ability to schedule the upgrade of the client build on the setup box.<br><br>
+                        Upgrade programming is allowed on three levels:<br><br>
+                        <b>Device level :</b> This level is used to upgrade the client build version on a single device for one account holder.<br><br>
+                        <b>Account level :</b> This level is used to upgrade the client build version on multiple devices for one account holder.<br><br>
+                        <b>Group level : </b> This level is used to do a mass upgrade of a Client build version on multiple devices for multiple account holders at once.<br>
+                     </p>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                  </div>
+               </div>
+               <div class="col-md-12" id="clientmanager" style="display:none">
+                  <div id="Div3">
+                     <h1>KheloIndia Client Manager™</h1>
+                     <p>Client Manager™ has for major functional areas for operations and three major functional areas for system administration:
+                        <br>
+                     </p>
+                     <h2>Operations Functionality:</h2>
+                     1. Subscriber Management<br>
+                     2. Set-Top Box Management<br>
+                     3. Job Management<br>
+                     4. Rule Management<br>
+                     <br>
+                     <h2>System Administration Functionality:</h2>
+                     1. Configuration Management<br>
+                     2. Security Based Role Management<br>
+                     3. Management of the Import/Synchronization data from Mediaroom<br>
+                     <br>
+                     <p></p>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                  </div>
+               </div>
+               <div class="col-md-12" id="sites" style="display:none">
+                  <div id="Div15">
+                     <h1>KheloIndia Sites™</h1>
+                     <p>Sites™ is a management interface for sharing a single installation of Mediaroom amongst multiple entities, while maintaining a secure, autonomous environment for each individual entity back-end systems including:<br><br>
+                        <img src="images/MiniArrow.gif" alt="" align="left">Custom Branded Experience. <br><br>
+                        <img src="images/MiniArrow.gif" alt="" align="left">Each Site has its own Specific B\OSS Integration. <br><br>
+                        <img src="images/MiniArrow.gif" alt="" align="left">Site Specific Subscriber and Device Management.<br><br>
+                        <img src="images/MiniArrow.gif" alt="" align="left">Site defined channel maps and premium packages.<br><br>
+                        <img src="images/MiniArrow.gif" alt="" align="left">Sites are modeled as independent entities.<br><br>
+                        <img src="images/MiniArrow.gif" alt="" align="left">Independent access to their own management System.<br><br>
+                        <img src="images/MiniArrow.gif" alt="" align="left">Allows Subscriber accounts to be  managed through this interface.<br><br>
+                        <img src="images/MiniArrow.gif" alt="" align="left">All KheloIndia Plant Applications are supported.<br>
+                     </p>
+                     <img src="images/sites.png" alt="" align="left"> 
+                  </div>
+               </div>
+               <div class="col-md-12" id="billing" style="display:none">
+                  <div id="Div17">
+                     <h1>KheloIndia Billing™</h1>
+                     <p>The KheloIndia Billing™ Application is a global application that interfaces with the Microsoft Mediaroom system via published OSS/BSS web services. The Billing App is responsible for retrieving, reconciling, and publishing subscriber non-recurring (PPV/VOD/Application) billing records from a Microsoft Mediaroom system.  Billing retrieval can be scheduled daily, weekly, or monthly and can publish data in a variety of formats.<br><br>
+                        One or more instances, depending on load-balancing and redundancy requirements, of the Billing App exists per install, regardless of the number of Mediaroom branches. <br>
+                     </p>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                  </div>
+               </div>
+               <div class="col-md-12" id="grants" style="display:none">
+                  <div id="Div19">
+                     <h1>KheloIndia Grants™</h1>
+                     <p>Grants™ is an application for the management of subscriber rights for services, service collections, or packages and enables end users to access any of these resources.<br><br>
+                        Grants give end users permission to play, record, or pause assets and grants to be created for one or more subscriber groups.<br><br>
+                        Rights are dependent on whether the item is for a VOD, SVOD, RDP, DVR, PPV, SPPV (subscription PPV), or live TV service, service collection, or package.<br><br>
+                        Grants checks the access rights of the user account in the following sections; group level, package level and service collection levels.<br><br>
+                     </p>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                  </div>
+               </div>
+               <div class="col-md-12" id="notice" style="display:none;">
+                  <div id="Div21">
+                     <h1>KheloIndia Notice™</h1>
+                     <p>Notice™ is a notification service that enables service providers to send alert messages to set-top boxes, interrupting whatever programming end users may be watching. There are two types of Notification: <br><br>
+                        Level 1 alerts force set-top boxes to tune to a specified service, such as a presidential address.<br><br>
+                        Level 2 alerts display a message in a scrolling banner, such as a weather service alert that warns residents of certain counties that a flood warning has been issued. These alerts do not force set-top boxes to tune to a different service. <br><br>
+                        The alerts can be sent to just those set-top boxes in a particular geographical region. Alert messages can also be given a priority level, which determines the set-top boxes that display the alert. If a set-top box is tuned to a service with a priority threshold set, the set-top box ignores all alert messages whose priority is not greater than the threshold.<br>
+                     </p>
+                     <br>
+                     <br>
+                     <br>
+                  </div>
+               </div>
+               <div class="col-md-12" id="callerid" style="display:none">
+                  <div id="Div23">
+                     <h1>KheloIndia Caller ID™ </h1>
+                     <p>KheloIndia Caller ID™ Application is a light-weight, easily configurable software Application which provides a rich Caller ID experience to Mediaroom subscribers. Designed to be easy to use and administer, the KheloIndia Caller ID Application manages Microsoft Mediaroom integration, processing messages from a SIP v2.0-compliant telephony switch. Additional adapters are available to handle SS7 and non-standardized messaging sources.<br>
+                        <br>
+                        The KheloIndia Caller ID Application is a branch-level application that interfaces with the Microsoft Mediaroom system through the Notification system. There are certain considerations that are managed which guarantee that calls to this system do not adversely affect normal Mediaroom operations and that Caller ID messages are presented to the subscriber in a timely fashion (within 2 rings).<br>
+                        <br>
+                        The term branch-level means that a single logical instance of the KheloIndia Caller ID Application exists per Mediaroom branch. The only exception to this would be in the instance where multiple Caller ID sources are required to service a single branch. In this case, certain components, see below (Component Design), would need to be duplicated in order to support this configuration.<br>
+                        <br>
+                        The KheloIndia Caller ID Application supports Microsoft Mediaroom v1.1 SP3.2/Client 1.6.4 and above. The subscriber screens (more detail in Interface Subscriber) are provided via Mediaroom Presentation Framework (MPF).
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-12" id="remotedvr" style="display:none;">
+                  <div id="Div1">
+                     <h1>KheloIndia Remote PVR™ </h1>
+                     <p>The KheloIndia Remote PVR™ Scheduler  (a.k.a. R-PVR) extends the Microsoft Mediaroom DVR capabilities to allow for remote recording through web site portals and mobile phones. It provides remote management of scheduled and recorded shows. <br>
+                     </p><div>
+                        <img src="images/pvremote.jpg" alt="" width="215" height="126" style="padding-left:10px;">
+                     </div>
+                     <br>
+                     The R=PVR is a global application that interfaces with the Microsoft Mediaroom DVR system through the OSS Remote Record web service. Supporting and enhancing the DVR system, R-PVR  provides EPG search and recording capabilities. This functionality is supported by the import of EPG data to a central database independent of Microsoft Mediaroom.<br>
+                     <br>
+                     The term global application means that a single instance of the application is installed for each instance of the Microsoft Mediaroom system. Two public facing web sites provide the portal capabilities for Mediaroom subscribers to search the Electronic Program Guide, remote record and manage scheduled and recorded shows: one web site for regular internet users and the other for mobile phone users. The current versions of these websites illustrate the use of the PC Website controls and Mobile Website control libraries; it is expected that the carrier will integrate with existing web portals utilizing these libraries.  <br>
+                     <br>
+                     For a remote record request, a mapping of user credentials to subscriber account is required to identify the specific subscriber and recording device. The subscriber is correlated to the account and branch through these end-user credentials. The current version of R-PVR utilizes authentication credentials stored in the CSM database, although different authentication schemes can be developed outside the terms of this version. Once the subscriber has been correlated to an account and branch, the remote record request is then transported to the specific branch for processing by Microsoft Mediaroom. <br>
+                     <br>
+                     The KheloIndia Remote PVR Scheduler  supports Microsoft Mediaroom v1.1 SP2 and above.  <p></p>    
+                  </div>
+               </div>
+               <div class="col-md-12" id="tradeanalyzer" style="display:none;">
+                  <p class="three_third">      
+                  </p><h4>Trade Analyzer</h4>
+                  <p>Trade smarter and win your league! Easy-to-use tool for building and analyzing fantasy baseball trades. Syncs directly with CBSSports.com, ESPN or Yahoo! to provide customized advice based on your fantasy league's settings and your roster. Recommends specific trades and demonstrates how they affect your stats.</p>
+                  <p></p>
+                  <table>
+                     <tbody>
+                        <tr>
+                           <td><img src="images/bloomberg-fantasy-app-windows-phone-1-620x343.jpg"></td>
+                           <td><img src="images/bloom.png"></td>
+                           <td><img src="images/mob9.png"></td>
+                           <td><img src="images/mob10.png"></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <div class="col-md-12" id="wealthmanagement" style="display:none;">
+                  <p>      
+                  </p><h4>Wealth Management</h4>
+                  <p>Access market and economic insights from U.S. Bank Wealth Management experts, get financial market news and track your stocks. 
+                     With the U.S. Bank Wealth Management application for your Windows Phone, you can:
+                  </p>
+                  <li>Access timely Market and Economic Insights from U.S. Bank Wealth Management</li>
+                  <li>Get stock quotes                                                           </li>
+                  <li>Save and monitor a portfolio of stocks using interactive charting          </li>
+                  <li>Create custom alerts for your stocks                                       </li>
+                  <li>Read the latest financial market news                                      </li>
+                  <li>Find a U.S. Bank Branch or ATM location near you                           </li>
+                  U.S. Bank is committed to protecting your privacy and security. View our privacy pledge at usbank.com/privacy.
+                  <p></p>
+                  <div class="col-md-12">
+                     <div class="col-md-3"><img src="images/wealth.png"></div>
+                     <div class="col-md-3"><img src="images/wealth1.png"></div>
+                     <div class="col-md-3"><img src="images/wealth2.png"></div>
+                     <div class="col-md-3"><img src="images/wealth3.png"></div>
+                  </div>
+               </div>
+               <div class="col-md-12" id="hrms" style="display:none;"></div>
+               <div class="col-md-12" id="carshare" style="display:none;"></div>
+               <div class="col-md-12" id="estatecache" style="display:none;"></div>
+               <div class="col-md-12" id="erp" style="display:none;">
+                  <!-- article 3 -->
+                  <h2>KheloIndia ERP</h2>
+                  <p>      
+                  </p><h4>What is ‘KheloIndia ERP’?</h4>
+                  <p>Our ERP product ,’KheloIndia ERP’captures industry best practices as well as deep functional business process expertise. We help you automate and integrate all functions and processes of your organization, derive innovation across the value chain, improve efficiency, and reduce cost and time to market.</p>
+                  <p></p>
+                  <p>
+                  </p><h4>Why do you need an ERP system?</h4>
+                  <p>With KheloIndia ERP, you can address distinct, evolving needs of your business to compete and succeed in your industry. You can take control of your functions, plan ahead, manage smarter and deliver the desired results on time. KheloIndia ERP is packed with functionalities that can enable you to reach your potential, empower you with industry best practices and ensure you to accomplish your task with utmost precision. We can create efficiencies, superior flexibility and significant cost savings for you.</p>
+                  <p></p>
+                  <p>
+                  </p><h4>How is KheloIndia ERP special?</h4>
+                  <table>
+                     <caption style="text-align:left">KheloIndia ERP offers certain unique features:</caption>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>Our unique system can handle large databases with ease.</li>
+                                 <li>Comprehensive and integrated online solution covering all business domains.</li>
+                                 <li>Quick Go Live - implementation time is very short.</li>
+                                 <li>Easy scalability - flexibility to add new users, as an when the business grows.</li>
+                                 <li>Excellent disaster recovery and maintenance. Our back-up processes are very efficient.</li>
+                                 <li>Task monitoring and control. Option to give user specific rights and access as well as retrieve detailed history of task performed.</li>
+                                 <li>Seamless online integration of data acquired from across locations.</li>
+                                 <li>Online inventory trackingacross all branches.</li>
+                                 <li>Our System generates tasks automatically in a sequential manner. It also intimates to team members as and when required.</li>
+                                 <li>Charts, reports and graphs can be created as and when required. These can be printed in various languages.</li>
+                                 <li>Live Charts, Live Speedo Meter which shows the current position of the company.</li>
+                                 <li>Online Chat, e-mail option, sending reminders and automatic SMS are some other useful features of KheloIndia ERP.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+                  <p>
+                  </p><h2>KheloIndia ERP Features</h2>
+                  <p>     
+                  </p>
+                  <table>
+                     <caption style="text-align:left;font-size:18px;padding-bottom:10px">Sale Module of KheloIndia ERP</caption>
+                     <tbody>
+                        <tr>
+                           <th style="text-align:left">Purchase Order:</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>
+                                    A purchase advise is generated that contains the item list as well as the selected vendor. KheloIndia ERP checks requirement of raw material, suggested vendor as per product requirement timeline and vendor rating. It also shows additional vendors that supply the selected item. Once a purchase advise is generated, the Purchase order can be automatically or manually created.
+                                 </li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Goods Receipt Note:</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>The Goods receipt note is generated as per items receipt. Barcodes are attached to each carton that provide all required tracking information.
+                                 </li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Material Receipt Note:</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>
+                                    The Material receipt note is generated once the items in each carton are counted, inspected and repacked in separate carton for each item. New barcodes containing item quantity and allotted warehouse location are attached.
+                                 </li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Payables:</th>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>When  we receive goods, a barcode slip is generated for the vendor. Vendor needs to present this slip to receive payment. User scans the slip with KheloIndia ERP and pays accordingly.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>KheloIndia ERP also provides additional forms that individually maintain item information, vendor detail, taxes levied, discounts applicable and item rate per vendor.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+                  <p></p>
+                  <p>         
+                  </p><table>
+                     <caption style="text-align:left;font-size:18px;padding-bottom:10px">Purchase Module of KheloIndia ERP</caption>
+                     <tbody>
+                        <tr>
+                           <th style="text-align:left">Purchase Order:</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>A purchase advise is generated that contains the item list as well as the selected vendor. KheloIndia ERP checks requirement of raw material, suggested vendor as per product requirement timeline and vendor rating. It also shows additional vendors that supply the selected item. Once a purchase advise is generated, the Purchase order can be automatically or manually created.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Goods Receipt Note:</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>The Goods receipt note is generated as per items receipt. Barcodes are attached to each carton that provide all required tracking information.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Material Receipt Note:</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>The Material receipt note is generated once the items in each carton are counted, inspected and repacked in separate carton for each item. New barcodes containing item quantity and allotted warehouse location are attached.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Payables:</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>When  we receive goods, a barcode slip is generated for the vendor. Vendor needs to present this slip to receive payment. User scans the slip with KheloIndia ERP and pays accordingly.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>KheloIndia ERP also provides additional forms that individually maintain item information, vendor detail, taxes levied, discounts applicable and item rate per vendor.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+                  <p>         
+                  </p><table>
+                     <caption style="text-align:left;font-size:18px;padding-bottom:10px">Inventory Module of KheloIndia ERP</caption>
+                     <tbody>
+                        <tr>
+                           <th style="text-align:left">Stock Transfer:</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>KheloIndia ERP maintains store information and  product rack information, opening stock, stock transfer and  item conversion detail. Conversion of current stock into new stock is also tracked.  The issue card maintains stock transfer information.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>   
+                  <p>        
+                  </p><table>
+                     <caption style="text-align:left;font-size:18px;padding-bottom:10px">Agent Commission Module of KheloIndia ERP</caption>
+                     <tbody>
+                        <tr>
+                           <th style="text-align:left">Agent Commission:</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>The percent of agent commission is allotted on the basis ofvarious factors such as sale of each item, addition of new customer and payment collection per customer by the agent.</li>
+                                 <li>Tour generating system informs the agent of the areas that need to be visited by him. Agent commission can be calculated after each tour made by him. This includes TA/DA.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+                  <p>         
+                  </p><table>
+                     <tbody>
+                        <tr>
+                           <th style="text-align:left">Costing Module of KheloIndia ERP</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>Bill of material is automatically generated.</li>
+                                 <li>Formula for item raw material purchase cost as well as finished product sale price calculation can be entered on the item card. Automatic price calculation for sale and purchase rate takes place for all documents applicable such as bill estimate, price list etc.</li>
+                                 <li>Raw material rates can automatically be downloaded from the internet in KheloIndia ERP.</li>
+                                 <li>Selection of specific price list can be done for different states or customer as required.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+                  <p>         
+                  </p><table>
+                     <tbody>
+                        <tr>
+                           <th style="text-align:left">Accounting Module of KheloIndia ERP</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>Ledger Account creation.</li>
+                                 <li>Voucher Entry</li>
+                                 <li>Automatic voucher entry from many other modules such as from the bill, payment received etc.</li>
+                                 <li>Balance Sheet and Profit and Loss Account can be created as required,for each customer, ledger can be looked up to see applicable Late Fee Charges, Cash Discount, Central Sales Tax etc.</li>
+                                 <li>Cheque and Deposit slip printing option is also available. </li>
+                                 <li>All of the above documents can be created in KheloIndia ERP for multiple firms of the user.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+                  <p>         
+                  </p><table>
+                     <tbody>
+                        <tr>
+                           <th style="text-align:left">Packing Module of KheloIndia ERP</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>Process is defined for packing of material as required.</li>
+                                 <li>Detail of item that needs to be packed, item quantity and labels are automatically generated in the system.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+                  <p>         
+                  </p><table>
+                     <tbody>
+                        <tr>
+                           <th style="text-align:left">Admin Module of KheloIndia ERP</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>User Role Rights can be dined under this module.</li>
+                                 <li>History of changes made can be looked up.</li>
+                                 <li>Besides having form access rights, even row or column level rights can be defined in KheloIndia ERP as required.</li>
+                                 <li>Set Template for sending SMS's to user contacts as required.</li>
+                                 <li>Admin can set rights for user for adding, editing and/or deleting information for each form as required.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>  
+                  <p>    
+                  </p><table>
+                     <caption style="text-align:left;font-size:18px;padding-bottom:10px">Business Intelligence Module of KheloIndia ERP</caption>
+                     <tbody>
+                        <tr>
+                           <th style="text-align:left">SMS</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>Send /receive SMS's directly in customer account.</li>
+                                 <li>SMS's can be sent or received automatically to and from KheloIndia ERP by the user and his contacts at various stages of product processing as well as on various social occasions.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Email</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>Send and receive email directly in various contact accounts of the user.</li>
+                                 <li>E-mails can be sent or received automatically to and from KheloIndia ERP by the user and his contacts at various stages of product processing as well as on various social occasions.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Queries/Reports/Charts</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>User can create custom queries, reports and charts on demand.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">User Tasks</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>All tasks assigned to a user show up on their Desktop.</li>
+                                 <li>User can also set live chart and UI controls as required on their desktop.</li>
+                                 <li>User can add Task for another user as required. System will also confirm once task is completed.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Chat</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>All ERP users can chat with each other and also send and/or receive files.</li>
+                                 <li>Recording option is available in KheloIndia ERP for all communication.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Generate Reminders</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>User can set reminder in the system and receive the same via SMS, e-mail or on the desktop for self and/or other users as required.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th style="text-align:left">Backup Facility</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>Back up entire information as it is on user server.</li>
+                                 <li>Only back up new changes made in a specific time frame.</li>
+                                 <li>Back up entire information on an additional remote location.</li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="bottomSocialLinks footerLink" style="background-color:#434343; color:#8c8d8d">
+            <div class="container">
+               <div class="pull-left" style="margin-top:10px">
+                  <p>
+                     <a href="default.html">Home</a> | <a href="about.html">About</a> |  <a href="sitemap.html">Sitemap</a> | <a href="contact.html">Contact</a>
+                  </p>
+                  <p> © 2012-2015 KheloIndia Infotech, all rights reserved. <strong>KheloIndia</strong> and <img alt="KheloIndia Logo" src="images/kheloindiakhelo.png" style="width:8%;"> are registered trademarks owned by KheloIndia Infotech
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   
+</body></html>

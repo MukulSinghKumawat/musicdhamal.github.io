@@ -1,0 +1,94 @@
+﻿/* Elastislide Style */
+.sliderbar-list {	list-style-type: none; display: none;}
+.no-js .sliderbar-list { display: block;}
+.sliderbar-carousel ul li { min-width: 20px; /* minimum width of the image (min width + border) */}
+.sliderbar-wrapper { position: relative; background-color:#fff; margin: 0 auto; min-height: 60px;}
+.sliderbar-wrapper.sliderbar-loading { background-image: url(); background-repeat: no-repeat; background-position: center center}
+.sliderbar-horizontal { padding: 10px 50px;}
+.sliderbar-vertical {	padding: 40px 10px;}
+.sliderbar-carousel { overflow: hidden; position: relative;}
+.sliderbar-carousel ul {
+	position: relative;
+	display: block;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+.sliderbar-horizontal ul {
+	white-space: nowrap;
+}
+
+.sliderbar-carousel ul li {
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+}
+
+.sliderbar-horizontal ul li {
+	height: 100%;
+	display: inline-block;
+	background-color:#e9e9e9;
+}
+
+.sliderbar-vertical ul li {
+	display: block;
+}
+
+.sliderbar-carousel ul li a {
+	display: inline-block;
+	width: 100%;
+}
+
+.sliderbar-carousel ul li a img {
+	display: block;
+	
+	max-width: 100%;
+}
+
+/* Navigation Arrows */
+
+.sliderbar-wrapper nav span {
+	position: absolute;
+	background: #414244 url(../images/nav.png) no-repeat 4px 3px;
+	width: 23px;
+	height: 23px;
+	border-radius: 0%;
+	text-indent: -9000px;
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.sliderbar-wrapper nav span:hover {
+	opacity: 1.0
+}
+
+.sliderbar-horizontal nav span {
+	top: 50%;
+	left: 10px;
+	margin-top: -11px;
+}
+
+.sliderbar-vertical nav span {
+	top: 10px;
+	left: 50%;
+	margin-left: -11px;
+	background-position: -17px 5px;
+}
+
+.sliderbar-horizontal nav span.sliderbar-next {
+	right: 10px;
+	left: auto;
+	background-position: 4px -17px;
+}
+
+.sliderbar-vertical nav span.sliderbar-next {
+	bottom: 10px;
+	top: auto;
+	background-position: -17px -18px;
+}

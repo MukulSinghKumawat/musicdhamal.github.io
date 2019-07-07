@@ -1,0 +1,71 @@
+﻿
+body { padding-bottom: 40px; color: #5a5a5a; }
+
+.navbar-wrapper { position: absolute; top: 0; left: 0; right: 0; z-index: 20;}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container { padding-left: 0; padding-right: 0;}
+.navbar-wrapper .navbar { padding-left: 15px; padding-right: 15px;}
+
+.carousel { height: 380px; margin-bottom: 0px; /*background:#f8f8f8 url(../images/.jpg) no-repeat center top;*/ margin-top:150px;}
+.notificationCarousel { height: 80px; margin-bottom: 0px; background:#f8f8f8 ; margin-top:0; background:none; color:#ccc;  }
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption { z-index: 10;}
+
+/* Declare heights because of positioning of img element */
+.carousel .item { height: 380px;  /*background-color: #777;*/}
+
+.carousel-inner > .item > img {  top: 0; min-width: auto; height: 380px; right:20%; margin:0 auto}
+
+.notificationCarousel .item { height: 80px !important; }
+.notificationCarousel .carousel-caption {top:0; left:0px; right:60px; padding-top: 10px; }
+.notificationCarousel .carousel-caption  h3{text-shadow:none; text-tranform:uppercase; color:#ccc; margin:0; font-size:20px}
+.notificationCarousel .carousel-inner{position:absolute; width:96%}
+
+.notificationCarousel .carousel-control {width: 36px; top:0px; height: 36px; font-size: 15px; }
+.notificationCarousel .carousel-control.left, .notificationCarousel .carousel-control.right{background:#000; left:97%;  display: block; position: relative; z-index:999 }
+
+.notificationCarousel  .carousel-control .icon-prev, .notificationCarousel  .carousel-control .glyphicon-chevron-left{left:10px}
+.notificationCarousel  .carousel-control .icon-next, .notificationCarousel  .carousel-control .glyphicon-chevron-right{right:10px}
+
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing { padding-left: 15px; padding-right: 15px;}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 { text-align: center; margin-bottom: 20px;}
+.marketing h2 { font-weight: normal;}
+.marketing .col-lg-4 p { margin-left: 10px; margin-right: 10px;}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider { margin: 80px 0; /* Space out the Bootstrap <hr> more */}
+
+/* Thin out the marketing headings */
+.featurette-heading { font-weight: 300; line-height: 1; letter-spacing: -1px;}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) { 
+	.marketing { padding-left: 0; padding-right: 0; }
+	.navbar-wrapper { margin-top: 20px; }
+	.navbar-wrapper .container { padding-left: 15px; padding-right: 15px; }
+	.navbar-wrapper .navbar { padding-left: 0; padding-right: 0; }
+	.navbar-wrapper .navbar { border-radius: 4px; }
+
+	/* Bump up size of carousel content */
+	.carousel-caption p { margin-bottom: 20px; font-size: 21px; line-height: 1.4; }
+	.featurette-heading { font-size: 50px; }
+	.notificationCarousel .item{height:135px !important;}
+}
+
+@media (min-width: 992px) {
+	.featurette-heading { margin-top: 120px;}
+}

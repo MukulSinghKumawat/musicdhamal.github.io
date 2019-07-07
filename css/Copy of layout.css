@@ -1,0 +1,186 @@
+﻿html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
+
+body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#979797; background-color:#FFFFFF;}
+
+.clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
+.clear{display:block; clear:both;}
+html[xmlns] .clear{display:block;}
+* html .clear{height:1%;}
+
+a{outline:none; text-decoration:none;}
+
+code{font-weight:normal; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
+.imgl{float:left; margin:0 15px 15px 0; clear:left;}
+.imgr{float:right; margin:0 0 15px 15px; clear:right;}
+
+/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+address, article, aside, figcaption, figure, footer, header, hgroup, nav, section{display:block; margin:0; padding:0;}
+
+q{display:block; padding:0 10px 8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
+q:before{content:'“ '; font-size:26px;}
+q:after{content:' „'; font-size:26px; line-height:0;}
+
+/* ----------------------------------------------Wrapper-------------------------------------*/
+
+div.wrapper{display:block; width:960px; margin:0 auto; padding:0; text-align:left;}
+
+.row1, .row1 a{color:#979797; background-color:#FFFFFF;}
+.row2{color:#979797; background-color:#FFFFFF;}
+.row2 a{color:#FF9900; background-color:#FFFFFF;}
+.row3{border-top:1px solid #DEDEDE;}
+.row3, .row3 a{color:#979797; background-color:#FFFFFF;}
+
+/*----------------------------------------------Generalise-------------------------------------*/
+
+#header, #container, #footer{display:block; width:960px;}
+
+nav ul{margin:0; padding:0; list-style:none;}
+
+h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-weight:bold; font-style:normal; line-height:normal;}
+
+address{font-style:normal;}
+
+blockquote, q{display:block; padding:8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
+blockquote:before, q:before{content:'“ '; font-size:26px;}
+blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
+
+.one_third, .two_third, .three_third{display:block; float:left; margin:0 30px 0 0;}
+.one_third{width:300px;}
+.two_third{width:630px;}
+.three_third{width:960px; float:none; margin-right:0; clear:both;}
+.lastbox{margin-right:0;}
+
+/*----------------------------------------------Header-------------------------------------*/
+
+#header h1{}
+
+#header hgroup{padding:20px 0 0 0; float:left;}
+#header hgroup h1, #header hgroup h6{font-weight:normal; text-transform:none;}
+#header hgroup h1 a{color:#979797}
+#header hgroup h1{font-size:36px;}
+#header hgroup h2{font-size:13px;}
+
+#header nav{display:block; float:right; margin:20px 0 0 0; padding:20px 10px; }
+#header nav ul{}
+#header nav li{ /*display:inline;margin-right:25px; text-transform:uppercase;*/}
+#header nav li.last{margin-right:0;}
+#header nav li a{}
+/*#header nav li a:hover{color:#FF9900; background-color:#FFFFFF;}
+#header nav li a:active{color:#FF9900; background-color:#FFFFFF;}*/
+
+
+/*----------------------------------------------Content Area-------------------------------------*/
+
+#container{/*padding:30px 0;*/}
+#container section{display:block; width:100%; margin:0 0 30px 0; padding:0;}
+#container .last{margin:0;}
+#container .more{text-align:right; text-transform:uppercase; font-size:smaller; font-weight:bold;}
+
+/* ------Slider-----*/
+
+#container #slider{}
+#container #slider a{display:block; padding:9px; border:1px solid #DEDEDE;}
+#container #slider a:hover{border-color:#FF9900;}
+
+/*** set the width and height to match your images **/
+
+#slideshow {
+    position:relative;
+    height:360px;
+}
+
+#slideshow DIV {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+    height: 360px;
+    background-color: #FFF;
+}
+
+#slideshow DIV.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow DIV.last-active {
+    z-index:9;
+}
+
+#slideshow DIV IMG {
+    height: 360px;
+    display: block;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+/* ------Homepage-----*/
+
+#container #homepage{line-height:1.6em;}
+#container #homepage article{}
+#container #homepage article h2{font-size:14px; margin-bottom:15px; padding-bottom:8px; border-bottom:1px solid #DEDEDE;}
+#container #homepage article p{margin:0; padding:0;}
+#container #homepage article img{float:left; width:80px; height:80px; margin:0 10px 10px 0; padding:4px; border:1px solid #DEDEDE;}
+#container #homepage article footer{margin:10px 0 0 0;}
+
+/*----------------------------------------------Footer-------------------------------------*/
+
+#footer{padding:20px 0;}
+#footer p{margin:0; padding:0;}
+
+/*----------------------------------------------Contact Form-------------------------------------*/
+
+form, fieldset, input, textarea {	margin: 0; padding: 0; border: 0; outline: none;}
+
+#contact {width: 430px; margin: 40px auto; padding: 20px 20px 20px 20px; background: #FFF; border: 1px solid #e1e1e1; float:right}
+
+label {	float: left; clear: left; margin: 11px 20px 0 0; width: 95px;text-align: right; font-size: 16px; color:#979797;text-transform: uppercase;}
+
+input 
+{
+	width: 260px; height: 35px; padding: 5px 20px 0px 20px; margin: 0 0 20px 0;  border: 1px solid #e1e1e1;	background: #FFFFFF;	
+	font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; color:#979797; text-transform: uppercase;  
+}
+
+input::-webkit-input-placeholder  {	color:#979797;}
+
+input:-moz-placeholder { color:#979797;}
+	
+	
+textarea 
+{
+	width: 260px; height: 170px; padding: 12px 20px 0px 20px; margin: 0 0 20px 0; border: 1px solid #e1e1e1;background: #FFFFFF; max-width:260px;;
+	max-height:170px;font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; color:#979797; text-transform: uppercase;  
+}
+
+textarea::-webkit-input-placeholder  {	color:#979797;	}
+	
+textarea:-moz-placeholder {  color:#979797; }
+
+
+input:focus, textarea:focus
+{
+	background: #e7e7e7;	
+}
+
+input[type=submit]
+{
+	width: 185px; height: 52px; float: right; padding: 10px 15px; margin: 0 15px 0 0; border: 1px solid #5c5c5c;cursor: pointer;
+}
+
+input[type=submit]:hover
+{
+	background: #e7e7e7;
+}
+
+
+
+

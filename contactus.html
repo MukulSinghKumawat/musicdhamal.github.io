@@ -1,0 +1,152 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>KheloIndia Infotech  </title>
+<meta charset="iso-8859-1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="adcss/customizeStyle.css" rel="stylesheet" />
+    <link href="adcss/elastislide.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/layout.css" type="text/css">
+    <script>
+        $(document).ready(function ()
+        {
+            $("#contactForm").submit(function (event) {
+                // cancels the form submission
+                event.preventDefault();
+                submitForm();
+            });
+        });
+        function submitForm() {
+            // Initiate Variables With Form Content
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var message = $("#message").val();
+
+            $.ajax({
+                type: "POST",
+                url: "./php/form-process.php",
+                data: "name=" + name + "&email=" + email + "&message=" + message,
+                success: function (text) {
+                    if (text == "success") {
+                        formSuccess();
+                    }
+                }
+            });
+        }
+        function formSuccess() {
+            $("#msgSubmit").removeClass("hidden");
+        }
+    </script>
+<style type="text/css">
+            .auto-style1 {
+                width: 970px;
+            }
+        </style>
+    </head>
+    <body>
+<div class="wrapper row1">
+ <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="width:960px;margin-left:auto;margin-right:auto">
+  	<div class="topBar hidden-xs">
+    <div>
+      	<div class="pull-left"><a class="navbar-brand" href="ad_default.html"><img itemprop="image" class="img-responsive logo" alt="Advaiya Logo" src="images/kheloindiakhelo.png" style="height:50px"></a></div>
+        <div class="pull-right">
+        	<ul class="pull-left topBarLink">
+				<li><i class="fa fa-envelope-o"></i> <a class="headerMail" style="font-family: 'HelveticaNeue';" href="mailto:connect@KheloIndia.com"><meta itemprop="email" content="connect@KheloIndia.com">connect@KheloIndia.com</a></li>
+    			<li><i class="fa fa-phone"></i> <i class="icon-flag-US flagIn"></i><span itemprop="telephone"> +91 (294) 305 1100</span> <i class="icon-flag-US flagUs"></i> +1 (425) 256 3123 
+				</li>
+			</ul>
+    </div>
+        <div class="clearfix"></div>
+    </div>
+	</div>
+    <div class="navBox">
+	
+	<div class="container ">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse ">
+          <ul class="nav navbar-nav">
+            <li><a href="ad_default.html">HOME</a></li>
+      		<li><a href="ad_about.html">ABOUT</a> </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+				<li><a href="ad_services.html">Services</a></li>
+			</ul>
+			</li>
+			<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">PRODUCT<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+				<li><a href="ad_product.html">Product</a></li>
+			</ul>
+			</li>
+			<li><a href="ad_partner.html">PARTNERS</a> </li>
+			<li><a href="ad_contact.html">CONTACT</a> </li>
+          </ul>
+		</div>
+        
+      </div>
+    </div>
+    </div>
+</div>
+<!-- content -->
+<div class="wrapper row2"> 
+ <div id="container" class="clear" style="margin-top:155px">
+ <section id="slider"><a href="#"> <img alt="" src="images/contactus.png"></a></section> 
+
+  <div class="one_third">      
+      <p><h2>Address :</h2></p>
+      <div>
+   <span><img alt="" src="images/indiana-flag.png"></span>
+      <h3>203, Mehta Chamber ,Delhi Gate,Udaipur City,Rajasthan,India</h3>    
+      <h3>Phone: +91-7737640804</h3>
+          </div>
+
+      <div style="margin-top:5%">
+      <h3>203, Mehta Chamber ,Delhi Gate,Udaipur City,Rajasthan,India</h3>    
+      <h3>Phone: +91-7737640804</h3>
+     </div>
+    <div style="margin-top:10%">
+      <span><img alt="" src="images/us_flag_icon.png" height="30px" width:"30px"></span>
+      <h3>203, Mehta Chamber ,Delhi Gate,Udaipur City,Rajasthan,India</h3>    
+      <h3>Phone: +91-7737640804</h3>
+        </div>
+ </div> 
+ <div id="contact">
+   <center><h3>Contact form</h3></center>	
+	<br />
+	<form action="#" method="post" id="contactForm">
+		<fieldset>
+			<label for="name">Name:</label>
+			<input type="text" id="name" placeholder="Enter your full name" />
+			
+			<label for="email">Email:</label>
+			<input type="email" id="email" placeholder="Enter your email address" />
+			
+			<label for="message">Message:</label>
+			<textarea id="message" placeholder="What's on your mind?"></textarea>
+			
+			<input type="submit" value="Send message" />
+			
+		</fieldset>
+	</form>
+</div>  
+</div>
+</div>
+<!-- footer -->
+<div class="wrapper row3">
+  <footer class="clear">
+    <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - <a href="#">KheloIndia Infotech Pvt. Ltd</a></p>    
+  </footer>
+</div>
+</body>
+</html>
